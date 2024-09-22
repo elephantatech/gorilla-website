@@ -1,38 +1,118 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #4E342E; /* Dark brown */
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  background-color: #4CAF50; /* Green */
+  padding: 1rem;
+  width: 100%;
+  transition: top 0.3s;
+  z-index: 1000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-wrap: wrap;
+}
+
+.navbar li {
+  margin: 0.5rem;
+}
+
+.navbar a {
+  color: #FFFFFF; /* White */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.navbar.hidden {
+  display: none;
+}
+
+.navbar-toggle {
+  display: none;
+  background-color: #4CAF50; /* Green */
   color: white;
+  font-family: monospace, sans-serif;
+  font-style: oblique;
+  font-weight: bold;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1001;
 }
 
-.App-link {
-  color: #61dafb;
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+  }
+
+  .navbar li {
+    margin: 0.5rem 0;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Additional styles for the new theme */
+body {
+  background-color: #4E342E; /* Dark brown */
+}
+
+.App {
+  color: #2E2E2E; /* Dark grey */
+}
+
+.navbar {
+  background-color: #2E7D32; /* Dark green */
+}
+
+.navbar a {
+  color: #C0C0C0; /* Silver */
+}
+
+h1 {
+  color: #2E7D32; /* Dark green */
+}
+
+p {
+  color: #4E342E; /* Dark brown */
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #4E342E; /* Dark brown */
+  margin: 2rem 0;
+}
+
+.charity {
+  margin-bottom: 2rem;
+}
+
+.charity hr {
+  border: 0;
+  height: 1px;
+  background-color: #4E342E; /* Dark brown */
+  margin: 2rem 0;
 }

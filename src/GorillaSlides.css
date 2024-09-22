@@ -1,0 +1,24 @@
+.gorilla-slides {
+  width: 80%;
+  height: 80%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #4E342E; /* Dark brown */
+  display: block; /* Changed from flex to block */
+  position: relative;
+}
+
+.gorilla-slides .slide {
+  width: 100%;
+  height: 100%;
+  display: block; /* Changed from flex to block */
+  position: relative;
+}
+
+.gorilla-slides .slide img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}

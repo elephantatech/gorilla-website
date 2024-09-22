@@ -51,8 +51,8 @@ Add GitHub Secrets for that make sure you have a AWS S3 bucket for statuc websit
 
 Go to your GitHub repository settings and add the following secrets:
 
-AWS_S3_BUCKET: Your S3 bucket name.
-AWS_ACCESS_KEY_ID: Your AWS access key ID.
-AWS_SECRET_ACCESS_KEY: Your AWS secret access key
-REACT_APP_UNSPLASH_ACCESS_KEY: Your Unsplash access key
+- AWS_S3_BUCKET: Your S3 bucket name.
+- AWS_ACCESS_KEY_ID: Your AWS access key ID.
+- AWS_SECRET_ACCESS_KEY: Your AWS secret access key
+- REACT_APP_UNSPLASH_ACCESS_KEY: Your Unsplash access key
 

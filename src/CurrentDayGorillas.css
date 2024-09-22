@@ -1,0 +1,22 @@
+.current-day-gorillas {
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF; /* White */
+    padding: 2rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .current-day-gorillas .content {
+    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+    padding: 1rem;
+    border-radius: 8px;
+    max-width: 80%;
+    text-align: left;
+  }
+  
+  .current-day-gorillas h1, .current-day-gorillas p {
+    color: #FFFFFF; /* White */
+  }
