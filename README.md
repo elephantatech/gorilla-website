@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Gorilla website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+webpage build with react for gorilla and deployment to S3 bucket for static website.
 
 ## Available Scripts
 
@@ -44,3 +44,15 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+# deployment config
+
+Add GitHub Secrets for that make sure you have a AWS S3 bucket for statuc website. Also signup for unplash api key for development or production whichever the service you need.
+
+Go to your GitHub repository settings and add the following secrets:
+
+AWS_S3_BUCKET: Your S3 bucket name.
+AWS_ACCESS_KEY_ID: Your AWS access key ID.
+AWS_SECRET_ACCESS_KEY: Your AWS secret access key
+REACT_APP_UNSPLASH_ACCESS_KEY: Your Unsplash access key
+
