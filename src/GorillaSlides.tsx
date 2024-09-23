@@ -1,27 +1,29 @@
-import React, { useEffect, useState } from 'react';
-import { createApi } from 'unsplash-js';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import './GorillaSlides.css';
-
-const unsplash = createApi({ accessKey: process.env.REACT_APP_UNSPLASH_ACCESS_KEY || '' });
+import React, { useEffect, useState } from "react";
+import { searchPhotos } from "./GetImages";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "./GorillaSlides.css";
 
 const GorillaSlides: React.FC = () => {
   const [images, setImages] = useState<string[]>([]);
 
   useEffect(() => {
-    unsplash.search.getPhotos({ query: 'gorilla', perPage: 20 })
-      .then(result => {
-        const urls = result.response?.results.map(photo => photo.urls.full) || [];
+    const fetchPhotos = async () => {
+      const results = await searchPhotos("gorilla", 1, 20);
+      if (results) {
+        const urls = results.map((photo) => photo.urls.full);
         setImages(urls);
-      });
+      }
+    };
+
+    fetchPhotos();
   }, []);
 
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 300,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,

@@ -1,18 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import { createApi } from 'unsplash-js';
+import { searchPhotos } from "./GetImages";
 import './HistoryOfGorillas.css';
-
-const unsplash = createApi({ accessKey: process.env.REACT_APP_UNSPLASH_ACCESS_KEY || '' });
 
 const HistoryOfGorillas: React.FC = () => {
   const [imageUrl, setImageUrl] = useState<string>('');
 
   useEffect(() => {
-    unsplash.search.getPhotos({ query: 'gorillas sleeping', perPage: 1 })
-      .then(result => {
-        const url = result.response?.results[0].urls.full || '';
+    const fetchPhoto = async () => {
+      const results = await searchPhotos('gorillas sleeping', 1, 1);
+      if (results && results.length > 0) {
+        const url = results[0].urls.full || '';
         setImageUrl(url);
-      });
+      }
+    };
+
+    fetchPhoto();
   }, []);
 
   return (

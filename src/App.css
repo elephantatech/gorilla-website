@@ -102,7 +102,7 @@ p {
 hr {
   border: 0;
   height: 1px;
-  background-color: #4E342E; /* Dark brown */
+  background-color: #835b52; /* Dark brown */
   margin: 2rem 0;
 }
 
@@ -113,6 +113,6 @@ hr {
 .charity hr {
   border: 0;
   height: 1px;
-  background-color: #4E342E; /* Dark brown */
+  background-color: #835b52; /* Dark brown */
   margin: 2rem 0;
 }
